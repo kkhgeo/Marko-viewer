@@ -1,0 +1,126 @@
+body { visibility: visible; }
+
+.opt-page {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 56px 32px 120px;
+}
+
+.opt-page h1 {
+  font-size: clamp(26px, 3vw, 32px);
+  margin: 0 0 8px;
+  font-weight: 700;
+  letter-spacing: -.01em;
+}
+.opt-desc {
+  color: var(--mv-muted);
+  font-size: 14.5px;
+  margin: 0 0 40px;
+}
+
+.opt-section {
+  margin: 0 0 40px;
+  padding: 0 0 32px;
+  border-bottom: 1px solid var(--mv-line-soft);
+}
+.opt-section:last-of-type { border-bottom: none; }
+.opt-section h2 {
+  font-size: 13px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--mv-muted);
+  margin: 0 0 20px;
+  font-weight: 600;
+}
+
+.opt-row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 0 20px;
+}
+.opt-row label {
+  font-size: 15px;
+  color: var(--mv-ink);
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.opt-val {
+  font-family: var(--mv-mono);
+  font-size: 13px;
+  color: var(--mv-blue);
+  background: var(--mv-line-soft);
+  padding: 1px 8px;
+  border-radius: 2px;
+  margin-left: auto;
+}
+.opt-row.opt-check {
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.opt-row.opt-check label { margin: 0; }
+.opt-row input[type="checkbox"] {
+  width: 16px; height: 16px;
+  accent-color: var(--mv-blue);
+}
+
+.opt-row input[type="range"] {
+  width: 100%;
+  accent-color: var(--mv-blue);
+}
+
+.opt-row select {
+  padding: 8px 12px;
+  font-family: var(--mv-sans);
+  font-size: 14.5px;
+  background: var(--mv-bg);
+  color: var(--mv-ink);
+  border: 1px solid var(--mv-line);
+  border-radius: 2px;
+}
+
+.opt-tips {
+  font-size: 14.5px;
+  line-height: 1.8;
+  color: var(--mv-muted-strong);
+  padding-left: 20px;
+}
+.opt-tips li { margin: 4px 0; }
+.opt-tips code {
+  font-family: var(--mv-mono);
+  font-size: .9em;
+  background: var(--mv-line-soft);
+  padding: 1px 6px;
+  border-radius: 2px;
+}
+
+.opt-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+.opt-btn {
+  font-family: var(--mv-sans);
+  font-size: 14px;
+  padding: 8px 16px;
+  border: 1px solid var(--mv-line);
+  background: var(--mv-bg);
+  color: var(--mv-ink);
+  cursor: pointer;
+  border-radius: 2px;
+  transition: background .15s, color .15s;
+}
+.opt-btn:hover {
+  background: var(--mv-ink);
+  color: var(--mv-bg);
+}
+.opt-saved {
+  font-size: 13px;
+  color: var(--mv-green);
+  opacity: 0;
+  transition: opacity .25s;
+}
+.opt-saved.show { opacity: 1; }

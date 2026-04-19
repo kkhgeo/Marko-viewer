@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>MARKO · 설정</title>
+  <link rel="stylesheet" href="styles/kei-paper.css">
+  <link rel="stylesheet" href="options.css">
+</head>
+<body class="mv-ready">
+  <main class="opt-page">
+    <h1>MARKO 설정</h1>
+    <p class="opt-desc">한국어 논문 글쓰기용 마크다운 뷰어. 변경사항은 즉시 열려있는 .md 탭에 반영됩니다.</p>
+
+    <section class="opt-section">
+      <h2>제목 (H1, H2)</h2>
+
+      <div class="opt-row">
+        <label for="titleFontKo">한글 폰트</label>
+        <select id="titleFontKo" data-lang="ko"></select>
+      </div>
+
+      <div class="opt-row">
+        <label for="titleFontEn">영문 폰트</label>
+        <select id="titleFontEn" data-lang="en"></select>
+      </div>
+
+      <div class="opt-row">
+        <label for="titleSize">제목(H1) 크기 <span class="opt-val" id="titleSizeVal">32</span>px</label>
+        <input type="range" id="titleSize" min="22" max="44" step="1" value="32">
+      </div>
+    </section>
+
+    <section class="opt-section">
+      <h2>본문 (Body, H3+, 리스트 등)</h2>
+
+      <div class="opt-row">
+        <label for="bodyFontKo">한글 폰트</label>
+        <select id="bodyFontKo" data-lang="ko"></select>
+      </div>
+
+      <div class="opt-row">
+        <label for="bodyFontEn">영문 폰트</label>
+        <select id="bodyFontEn" data-lang="en"></select>
+      </div>
+
+      <div class="opt-row">
+        <label for="bodySize">본문 크기 <span class="opt-val" id="bodySizeVal">17</span>px (13pt≈17, 12pt=16)</label>
+        <input type="range" id="bodySize" min="13" max="22" step="0.5" value="17">
+      </div>
+    </section>
+
+    <section class="opt-section">
+      <h2>레이아웃</h2>
+
+      <div class="opt-row">
+        <label for="lineHeight">줄 간격 <span class="opt-val" id="lineHeightVal">1.75</span></label>
+        <input type="range" id="lineHeight" min="1.4" max="2.0" step="0.05" value="1.75">
+      </div>
+
+      <div class="opt-row">
+        <label for="maxWidth">본문 최대폭 <span class="opt-val" id="maxWidthVal">760</span>px</label>
+        <input type="range" id="maxWidth" min="600" max="1100" step="10" value="760">
+      </div>
+    </section>
+
+    <section class="opt-section">
+      <h2>UI 기본 상태</h2>
+
+      <div class="opt-row opt-check">
+        <input type="checkbox" id="darkMode">
+        <label for="darkMode">다크모드로 열기</label>
+      </div>
+
+      <div class="opt-row opt-check">
+        <input type="checkbox" id="tocHidden">
+        <label for="tocHidden">목차 접힌 상태로 시작</label>
+      </div>
+
+      <div class="opt-row opt-check">
+        <input type="checkbox" id="figuresHidden">
+        <label for="figuresHidden">그림 패널 접힌 상태로 시작</label>
+      </div>
+    </section>
+
+    <section class="opt-section">
+      <h2>사용법</h2>
+      <ul class="opt-tips">
+        <li>브라우저에서 로컬 <code>.md</code> 파일을 열면 자동으로 렌더링됩니다.</li>
+        <li>삼단 레이아웃: 좌측 목차 · 중앙 본문 · 우측 그림 패널</li>
+        <li>단축키: <strong>T</strong> 목차 · <strong>F</strong> 그림 패널 · <strong>D</strong> 다크모드</li>
+        <li>같은 폴더의 이미지는 <code>![캡션](figure.png)</code>. alt가 캡션이 됨.</li>
+        <li>수식 <code>$...$</code>, 각주 <code>[^1]</code> 지원.</li>
+        <li>본문 드래그 → 팔레트로 형광펜 칠하기 (원본 .md는 건드리지 않음)</li>
+        <li>처음 설치 후 <em>확장 관리 → Markview → "파일 URL 접근 허용"</em> 체크 필요.</li>
+      </ul>
+    </section>
+
+    <div class="opt-actions">
+      <button id="reset" class="opt-btn">기본값으로 초기화</button>
+      <span class="opt-saved" id="saved">저장됨</span>
+    </div>
+  </main>
+  <script src="options.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "MARKO",
+  "version": "0.1.0",
+  "description": "한국어 논문 글쓰기용 로컬 마크다운 뷰어 — 목차·그림패널·형광펜·메모앵커 지원, AI와 협업하는 조용한 읽기·주석 도구",
+  "permissions": ["storage"],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["file:///*"],
+      "include_globs": ["*.md", "*.markdown", "*.MD", "*.mdown", "*.mkd"],
+      "js": [
+        "lib/marked.min.js",
+        "lib/katex.min.js",
+        "lib/auto-render.min.js",
+        "content.js"
+      ],
+      "css": [
+        "lib/katex.min.css",
+        "styles/kei-paper.css"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["fonts/*", "lib/fonts/*", "styles/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
