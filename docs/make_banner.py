@@ -19,8 +19,8 @@ def load_woff2(woff2_path: Path, size: int) -> ImageFont.FreeTypeFont:
 
 # ---- Canvas (2x resolution for HiDPI) ----
 SCALE = 2
-W = 1400 * SCALE
-H = 480 * SCALE
+W = 1000 * SCALE
+H = 440 * SCALE
 
 BG       = '#f6f0e3'
 INK      = '#0f1624'
@@ -69,7 +69,9 @@ draw.text((marko_x, marko_y), "MARKO", font=font_marko, fill=INK)
 
 # ---- Divider line ----
 y_div = px(220)
-draw.line([(px(580), y_div), (px(820), y_div)], fill=INK + "40", width=px(1))
+cx = W // 2
+div_half = px(120)
+draw.line([(cx - div_half, y_div), (cx + div_half, y_div)], fill=INK + "40", width=px(1))
 
 # ---- Tagline ----
 tagline = "한국어 논문 글쓰기용 로컬 마크다운 뷰어"
