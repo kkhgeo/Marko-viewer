@@ -1,10 +1,5 @@
 <p align="center">
-  <img src="docs/logo.png" alt="MARKO" width="400">
-</p>
-
-<p align="center">
-  <strong>한국어 논문 글쓰기용 로컬 마크다운 뷰어</strong><br>
-  AI와 협업하는 조용한 읽기·주석 도구
+  <img src="docs/banner.png" alt="MARKO — 한국어 논문 글쓰기용 로컬 마크다운 뷰어">
 </p>
 
 ---

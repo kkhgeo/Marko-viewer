@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 360" width="1280" height="360">
+  <rect width="1280" height="360" fill="#f6f0e3"/>
+
+  <!-- 얇은 상단선 (editorial 톤) -->
+  <line x1="0" y1="4" x2="1280" y2="4" stroke="#0f1624" stroke-width="4"/>
+
+  <!-- 로고 (가운데 정렬) -->
+  <g transform="translate(404, 110)">
+    <rect x="0"   y="0" width="60" height="60" rx="7" fill="#ff8a2a"/>
+    <rect x="72"  y="0" width="60" height="60" rx="7" fill="#009fde"/>
+    <rect x="144" y="0" width="60" height="60" rx="7" fill="#00ab84"/>
+    <text x="232" y="52"
+          font-family="'Arial Black', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+          font-weight="900"
+          font-size="72"
+          fill="#0f1624"
+          letter-spacing="2">MARKO</text>
+  </g>
+
+  <!-- 구분선 -->
+  <line x1="560" y1="222" x2="720" y2="222" stroke="#0f1624" stroke-opacity="0.25" stroke-width="1"/>
+
+  <!-- 한국어 태그라인 -->
+  <text x="640" y="258"
+        text-anchor="middle"
+        font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif"
+        font-weight="600"
+        font-size="22"
+        fill="#0f1624"
+        fill-opacity="0.82">한국어 논문 글쓰기용 로컬 마크다운 뷰어</text>
+
+  <!-- 부제 -->
+  <text x="640" y="293"
+        text-anchor="middle"
+        font-family="'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif"
+        font-weight="400"
+        font-size="16"
+        fill="#0f1624"
+        fill-opacity="0.58">AI와 협업하는 조용한 읽기·주석 도구</text>
+
+  <!-- 기능 뱃지 (하단) -->
+  <g transform="translate(640, 325)" fill="#0f1624" fill-opacity="0.5" font-family="'Arial', sans-serif" font-size="12" text-anchor="middle" letter-spacing="1.5">
+    <text x="-190" y="0">3-COLUMN LAYOUT</text>
+    <text x="-60"  y="0">·</text>
+    <text x="0"    y="0">LaTeX MATH</text>
+    <text x="70"   y="0">·</text>
+    <text x="150"  y="0">HIGHLIGHTS</text>
+    <text x="245"  y="0">·</text>
+    <text x="310"  y="0">MEMOS</text>
+  </g>
+</svg>
