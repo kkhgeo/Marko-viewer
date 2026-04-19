@@ -1,10 +1,15 @@
-# MARKO
+<p align="center">
+  <img src="docs/logo.png" alt="MARKO" width="400">
+</p>
 
-**한국어 논문 글쓰기용 로컬 마크다운 뷰어** — AI와 협업하는 조용한 읽기·주석 도구.
+<p align="center">
+  <strong>한국어 논문 글쓰기용 로컬 마크다운 뷰어</strong><br>
+  AI와 협업하는 조용한 읽기·주석 도구
+</p>
+
+---
 
 크롬에서 `.md` 파일을 드래그하면 논문처럼 렌더됩니다. 세로 3단 레이아웃 · 수식 · 목차 · 형광펜 · 텍스트 앵커 메모 · 파일별 설정. 원본 `.md` 파일은 수정하지 않습니다.
-
-![MARKO screenshot placeholder](docs/screenshot.png)
 
 ---
 
